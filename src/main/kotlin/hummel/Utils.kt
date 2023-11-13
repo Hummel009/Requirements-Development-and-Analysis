@@ -3,9 +3,9 @@ package hummel
 import hummel.basic.Sender
 import java.sql.Connection
 
-const val url: String = "jdbc:mysql://127.0.0.1:3306/mydb"
+const val url: String = "jdbc:mysql://localhost:3306/mydb"
 const val user: String = "root"
-const val password: String = "amogus131"
+const val password: String = "amogus134"
 
 fun addSampleValue(
 	connection: Connection, tableName: String, sampleValue: Int, ok: Sender, err: Sender
