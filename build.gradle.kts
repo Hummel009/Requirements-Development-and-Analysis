@@ -1,26 +1,23 @@
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-
 plugins {
 	id("org.jetbrains.kotlin.jvm") version "1.9.20"
-	id("application")
+	id("war")
 }
 
-group = "org.example"
-version = "v" + LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
+group = "hummel"
+version = "1.0-SNAPSHOT"
 
 repositories {
 	mavenCentral()
 }
 
-val embed: Configuration by configurations.creating
-
 dependencies {
-	embed("org.jetbrains.kotlin:kotlin-stdlib:1.9.20")
+	implementation("com.mysql:mysql-connector-j:8.2.0")
+	implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+	implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0")
+	implementation("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
 	implementation("com.rabbitmq:amqp-client:5.12.0")
 	implementation("org.slf4j:slf4j-api:1.7.32")
 	implementation("org.slf4j:slf4j-simple:1.7.32")
-	implementation("com.mysql:mysql-connector-j:8.2.0")
 }
 
 java {
@@ -33,22 +30,8 @@ kotlin {
 	jvmToolchain(17)
 }
 
-application {
-	mainClass = "hummel.MainKt"
-}
-
 tasks {
-	jar {
-		manifest {
-			attributes(
-				mapOf(
-					"Main-Class" to "hummel.MainKt"
-				)
-			)
-		}
-		from(embed.map {
-			if (it.isDirectory()) it else zipTree(it)
-		})
-		duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	withType<JavaCompile>().configureEach {
+		options.encoding = "UTF-8"
 	}
 }
