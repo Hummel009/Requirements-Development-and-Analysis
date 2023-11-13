@@ -1,8 +1,24 @@
 package hummel.microservice.sender
 
+import hummel.addSampleValue
 import hummel.basic.Sender
+import hummel.password
+import hummel.url
+import hummel.user
+import java.sql.DriverManager
 
 fun launchAirlineManagementService() {
-	Sender("AirlineManagement", "AirlineManagement")
-	Sender("Error", "AirlineManagement")
+	try {
+		DriverManager.getConnection(url, user, password).use {
+			addSampleValue(
+				it,
+				"airlines",
+				1,
+				Sender("AirlineManagement", "AirlineManagement", System.out),
+				Sender("Error", "AirlineManagement", System.err)
+			)
+		}
+	} catch (e: Exception) {
+		Sender("Error", "AirlineManagement", System.err)
+	}
 }

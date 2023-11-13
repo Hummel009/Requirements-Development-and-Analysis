@@ -8,11 +8,11 @@ import java.util.*
 val commands: Map<String, () -> Unit> = mapOf(
 	"airline" to ::launchAirlineManagementService,
 	"user" to ::launchUserManagementService,
-	"report" to ::launchReportAnalyticsService,
 	"booking" to ::launchBookingService,
-	"notif" to ::launchNotificationService,
 	"payment" to ::launchPaymentService,
 	"flight" to ::launchFlightManagementService,
+	"notif" to ::launchNotificationService,
+	"report" to ::launchReportAnalyticsService,
 	"commands" to ::showCommands
 )
 
