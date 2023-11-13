@@ -14,14 +14,14 @@ class MyServlet : HttpServlet() {
 		val buttonClicked = request.getParameter("button")
 		buttonClicked?.let {
 			when (it) {
-				"button1" -> ::launchAirlineManagementService
-				"button2" -> ::launchUserManagementService
-				"button3" -> ::launchBookingService
-				"button4" -> ::launchPaymentService
-				"button5" -> ::launchFlightManagementService
-				"button6" -> ::launchNotificationService
-				else -> ::launchReportAnalyticsService
-			}.invoke()
+				"button1" -> launchAirlineManagementService()
+				"button2" -> launchUserManagementService()
+				"button3" -> launchBookingService()
+				"button4" -> launchPaymentService()
+				"button5" -> launchFlightManagementService()
+				"button6" -> launchNotificationService()
+				"button7" -> launchReportAnalyticsService()
+			}
 		}
 
 		request.getRequestDispatcher("index.jsp").forward(request, response)
