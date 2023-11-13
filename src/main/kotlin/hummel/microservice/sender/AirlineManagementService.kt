@@ -10,14 +10,9 @@ import java.sql.DriverManager
 fun launchAirlineManagementService() {
 	try {
 		DriverManager.getConnection(url, user, password).use {
-			addSampleValue(
-				it,
-				"airlines",
-				1,
-				Sender("AirlineManagement", "AirlineManagement", System.out),
-				Sender("Error", "AirlineManagement", System.err)
-			)
+			addSampleValue(it, "airlines", 1)
 		}
+		Sender("AirlineManagement", "AirlineManagement", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "AirlineManagement", System.err)
 	}

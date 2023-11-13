@@ -10,14 +10,9 @@ import java.sql.DriverManager
 fun launchUserManagementService() {
 	try {
 		DriverManager.getConnection(url, user, password).use {
-			addSampleValue(
-				it,
-				"users",
-				1,
-				Sender("UserManagementService", "UserManagementService", System.out),
-				Sender("Error", "UserManagementService", System.err)
-			)
+			addSampleValue(it, "users", 1)
 		}
+		Sender("UserManagementService", "UserManagementService", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "UserManagementService", System.err)
 	}

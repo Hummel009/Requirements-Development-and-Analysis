@@ -20,6 +20,7 @@ dependencies {
 	implementation("com.rabbitmq:amqp-client:5.12.0")
 	implementation("org.slf4j:slf4j-api:1.7.32")
 	implementation("org.slf4j:slf4j-simple:1.7.32")
+	implementation("com.mysql:mysql-connector-j:8.2.0")
 }
 
 java {

@@ -10,14 +10,9 @@ import java.sql.DriverManager
 fun launchPaymentService() {
 	try {
 		DriverManager.getConnection(url, user, password).use {
-			addSampleValue(
-				it,
-				"payments",
-				1,
-				Sender("PaymentService", "PaymentService", System.out),
-				Sender("Error", "PaymentService", System.err)
-			)
+			addSampleValue(it, "payments", 1)
 		}
+		Sender("PaymentService", "PaymentService", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "PaymentService", System.err)
 	}
