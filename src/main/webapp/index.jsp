@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Моя JSP страница</title>
+    <title>Заказ билетов</title>
     <style>
 		body {
 			display: flex;
@@ -72,7 +72,6 @@
     </style>
 </head>
 <body>
-
 <form action="MyServlet" method="get">
     <button type="submit" name="button" value="button1">AIRLINE</button>
     <button type="submit" name="button" value="button2">USERMAN</button>
@@ -81,8 +80,6 @@
     <button type="submit" name="button" value="button5">FLIGHTS</button>
     <button type="submit" name="button" value="button6">NOTIFIC</button>
     <button type="submit" name="button" value="button7">REPORTS</button>
-
 </form>
-
 </body>
 </html>
