@@ -9,7 +9,7 @@ import java.sql.DriverManager
 
 fun launchFlightManagementService() {
 	try {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.jdbc.Driver")
 		DriverManager.getConnection(url, user, password).use {
 			addSampleValue(it, "flights", 1)
 		}
