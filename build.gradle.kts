@@ -1,12 +1,13 @@
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+
 plugins {
 	id("org.jetbrains.kotlin.jvm") version "1.9.20"
 	id("war")
-	id("idea")
-	id("eclipse")
 }
 
 group = "hummel"
-version = "1.0-SNAPSHOT"
+version = "v" + LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
 
 repositories {
 	mavenCentral()
@@ -25,18 +26,5 @@ dependencies {
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
-	}
-}
-
-idea {
-	module {
-		jdkName = "17"
-	}
-}
-
-eclipse {
-	jdt {
-		sourceCompatibility = JavaVersion.VERSION_17
-		targetCompatibility = JavaVersion.VERSION_17
 	}
 }
