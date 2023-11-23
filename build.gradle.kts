@@ -28,9 +28,3 @@ java {
 		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
-
-tasks {
-	named<JavaExec>("run") {
-		standardInput = System.`in`
-	}
-}
