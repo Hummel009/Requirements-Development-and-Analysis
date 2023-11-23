@@ -1,30 +1,39 @@
 package hummel
 
-import hummel.microservice.*
+import hummel.microservice.launchNotificationService
+import hummel.microservice.launchReportAnalyticsService
 import hummel.microservice.sender.*
-import java.nio.charset.StandardCharsets
-import java.util.*
-
-val commands: Map<String, () -> Unit> = mapOf(
-	"airline" to ::launchAirlineManagementService,
-	"user" to ::launchUserManagementService,
-	"booking" to ::launchBookingService,
-	"payment" to ::launchPaymentService,
-	"flight" to ::launchFlightManagementService,
-	"notif" to ::launchNotificationService,
-	"report" to ::launchReportAnalyticsService,
-	"commands" to ::showCommands
-)
 
 fun main() {
-	Scanner(System.`in`, StandardCharsets.UTF_8).use {
-		while (true) {
-			val command = it.nextLine()
-			commands[command]?.invoke()
+	Launcher.init()
+	while (true) {
+		print("Enter the command: ")
+		val command = readln()
+
+		if ("exit" == command) {
+			break
 		}
+
+		Launcher.functions[command]?.invoke() ?: println("Unknown command!")
 	}
 }
 
-private fun showCommands() {
-	commands.forEach { println(it.key) }
+object Launcher {
+	val functions: MutableMap<String, () -> Unit> = HashMap()
+
+	fun init() {
+		functions.clear()
+		functions["airline"] = ::launchAirlineManagementService
+		functions["user"] = ::launchUserManagementService
+		functions["booking"] = ::launchBookingService
+		functions["payment"] = ::launchPaymentService
+		functions["flight"] = ::launchFlightManagementService
+		functions["notif"] = ::launchNotificationService
+		functions["report"] = ::launchReportAnalyticsService
+		functions["commands"] = ::showCommands
+	}
+
+	private fun showCommands() {
+		functions.forEach { println(it.key) }
+	}
 }
