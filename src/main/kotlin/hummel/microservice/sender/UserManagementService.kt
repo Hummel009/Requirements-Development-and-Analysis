@@ -16,5 +16,5 @@ fun launchUserManagementService() {
 		Sender("UserManagementService", "UserManagementService", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "UserManagementService", System.err)
-	}
+	}.launch()
 }

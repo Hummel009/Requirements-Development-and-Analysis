@@ -4,8 +4,8 @@ import com.rabbitmq.client.ConnectionFactory
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets
 
-class Sender(queueName: String, content: String, stream: PrintStream) {
-	init {
+class Sender(private val queueName: String, private val content: String, private val stream: PrintStream) {
+	fun launch() {
 		val factory = ConnectionFactory()
 		factory.host = "localhost"
 		factory.newConnection().use { connection ->

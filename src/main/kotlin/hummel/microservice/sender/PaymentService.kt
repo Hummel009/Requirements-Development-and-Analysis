@@ -16,5 +16,5 @@ fun launchPaymentService() {
 		Sender("PaymentService", "PaymentService", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "PaymentService", System.err)
-	}
+	}.launch()
 }

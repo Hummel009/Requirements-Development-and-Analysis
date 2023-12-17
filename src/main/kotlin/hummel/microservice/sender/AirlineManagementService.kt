@@ -16,5 +16,5 @@ fun launchAirlineManagementService() {
 		Sender("AirlineManagement", "AirlineManagement", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "AirlineManagement", System.err)
-	}
+	}.launch()
 }

@@ -16,5 +16,5 @@ fun launchFlightManagementService() {
 		Sender("FlightManagementService", "FlightManagementService", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "FlightManagementService", System.err)
-	}
+	}.launch()
 }

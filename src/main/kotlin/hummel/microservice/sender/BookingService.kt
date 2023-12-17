@@ -16,5 +16,5 @@ fun launchBookingService() {
 		Sender("BookingService", "BookingService", System.out)
 	} catch (e: Exception) {
 		Sender("Error", "BookingService", System.err)
-	}
+	}.launch()
 }
