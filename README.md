@@ -1,3 +1,14 @@
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=code_smells)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=sqale_rating)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=security_rating)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=bugs)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=vulnerabilities)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=duplicated_lines_density)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=reliability_rating)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=alert_status)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=sqale_index)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=ncloc)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+
 Мои лабораторные работы для BSUIR/БГУИР (белорусский государственный университет информатики и радиоэлектроники).
 
 Предмет - RiAT/РиАТ (разработка и анализ требований).
