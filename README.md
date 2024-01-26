@@ -1,13 +1,13 @@
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=code_smells)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=sqale_rating)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=security_rating)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=bugs)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=vulnerabilities)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=duplicated_lines_density)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=reliability_rating)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=alert_status)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=sqale_index)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=ncloc)](https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis)
+[![Code Smells][code_smells_badge]][code_smells_link]
+[![Maintainability Rating][maintainability_rating_badge]][maintainability_rating_link]
+[![Security Rating][security_rating_badge]][security_rating_link]
+[![Bugs][bugs_badge]][bugs_link]
+[![Vulnerabilities][vulnerabilities_badge]][vulnerabilities_link]
+[![Duplicated Lines (%)][duplicated_lines_density_badge]][duplicated_lines_density_link]
+[![Reliability Rating][reliability_rating_badge]][reliability_rating_link]
+[![Quality Gate Status][quality_gate_status_badge]][quality_gate_status_link]
+[![Technical Debt][technical_debt_badge]][technical_debt_link]
+[![Lines of Code][lines_of_code_badge]][lines_of_code_link]
 
 Мои лабораторные работы для BSUIR/БГУИР (белорусский государственный университет информатики и радиоэлектроники).
 
@@ -22,3 +22,45 @@
 брокер - RabbitMQ. Пользователь через сайт с кнопками может взаимодействовать с базой данных, каждое действие посылает в
 брокер положительный или отрицательный сигнал. Положительные сигналы уходят в свой собственный канал, а отрицательные -
 в канал ошибок. Две последние кнопки открывают микросервисы прослушиваения именных каналов и ошибочного канала.
+
+<!----------------------------------------------------------------------------->
+
+[code_smells_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=code_smells
+
+[code_smells_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[maintainability_rating_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=sqale_rating
+
+[maintainability_rating_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[security_rating_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=security_rating
+
+[security_rating_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[bugs_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=bugs
+
+[bugs_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[vulnerabilities_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=vulnerabilities
+
+[vulnerabilities_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[duplicated_lines_density_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=duplicated_lines_density
+
+[duplicated_lines_density_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[reliability_rating_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=reliability_rating
+
+[reliability_rating_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[quality_gate_status_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=alert_status
+
+[quality_gate_status_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[technical_debt_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=sqale_index
+
+[technical_debt_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
+
+[lines_of_code_badge]: https://sonarcloud.io/api/project_badges/measure?project=Hummel009_Requirements-Development-and-Analysis&metric=ncloc
+
+[lines_of_code_link]: https://sonarcloud.io/summary/overall?id=Hummel009_Requirements-Development-and-Analysis
