@@ -8,10 +8,6 @@ plugins {
 group = "hummel"
 version = "1.0-SNAPSHOT"
 
-repositories {
-	mavenCentral()
-}
-
 dependencies {
 	implementation("com.mysql:mysql-connector-j:8.2.0")
 	implementation("org.springframework.boot:spring-boot-starter-web")
