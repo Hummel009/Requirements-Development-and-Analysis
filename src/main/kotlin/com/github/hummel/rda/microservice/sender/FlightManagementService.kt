@@ -1,10 +1,10 @@
-package hummel.microservice.sender
+package com.github.hummel.rda.microservice.sender
 
-import hummel.addSampleValue
-import hummel.basic.Sender
-import hummel.password
-import hummel.url
-import hummel.user
+import com.github.hummel.rda.addSampleValue
+import com.github.hummel.rda.basic.Sender
+import com.github.hummel.rda.password
+import com.github.hummel.rda.url
+import com.github.hummel.rda.user
 import java.sql.DriverManager
 
 fun launchFlightManagementService() {

@@ -1,4 +1,4 @@
-package hummel
+package com.github.hummel.rda
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

@@ -1,6 +1,6 @@
-package hummel.microservice
+package com.github.hummel.rda.microservice
 
-import hummel.microservice.sender.*
+import com.github.hummel.rda.microservice.sender.*
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import org.springframework.stereotype.Controller

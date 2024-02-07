@@ -1,6 +1,6 @@
-package hummel.microservice
+package com.github.hummel.rda.microservice
 
-import hummel.basic.Receiver
+import com.github.hummel.rda.basic.Receiver
 
 fun launchNotificationService() {
 	Receiver("AirlineManagement", System.out).launch()

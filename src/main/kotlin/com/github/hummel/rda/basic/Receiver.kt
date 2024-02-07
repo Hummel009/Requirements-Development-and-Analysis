@@ -1,4 +1,4 @@
-package hummel.basic
+package com.github.hummel.rda.basic
 
 import com.rabbitmq.client.ConnectionFactory
 import com.rabbitmq.client.DeliverCallback

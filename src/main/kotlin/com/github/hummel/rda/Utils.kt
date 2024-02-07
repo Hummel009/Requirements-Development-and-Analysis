@@ -1,4 +1,4 @@
-package hummel
+package com.github.hummel.rda
 
 import java.sql.Connection
 
