@@ -1,14 +1,16 @@
 package com.github.hummel.rda
 
-import org.springframework.boot.SpringApplication
-import org.springframework.boot.autoconfigure.SpringBootApplication
+import com.github.hummel.rda.microservice.configureRouting
+import com.github.hummel.rda.microservice.configureTemplating
+import io.ktor.server.application.*
+import io.ktor.server.engine.*
+import io.ktor.server.netty.*
 
-@SpringBootApplication
-open class Application {
-	companion object {
-		@JvmStatic
-		fun main(args: Array<String>) {
-			SpringApplication.run(Application::class.java, *args)
-		}
-	}
+fun main() {
+	embeddedServer(Netty, port = 8080, module = Application::module).start(wait = true)
+}
+
+fun Application.module() {
+	configureRouting()
+	configureTemplating()
 }

@@ -1,27 +1,56 @@
 package com.github.hummel.rda.microservice
 
 import com.github.hummel.rda.microservice.sender.*
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
-import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.RequestMapping
+import freemarker.cache.ClassTemplateLoader
+import freemarker.core.HTMLOutputFormat
+import io.ktor.http.*
+import io.ktor.server.application.*
+import io.ktor.server.freemarker.*
+import io.ktor.server.http.content.*
+import io.ktor.server.request.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 
-@Controller
-class MyServlet {
-	@RequestMapping("/launchService")
-	fun launchService(request: HttpServletRequest, response: HttpServletResponse) {
-		val buttonClicked = request.getParameter("button")
-		buttonClicked?.let {
-			when (it) {
-				"airline" -> launchAirlineManagementService()
-				"userman" -> launchUserManagementService()
-				"booking" -> launchBookingService()
-				"payment" -> launchPaymentService()
-				"flights" -> launchFlightManagementService()
-				"notific" -> launchNotificationService()
-				"reports" -> launchReportAnalyticsService()
-			}
+fun Application.configureRouting() {
+	routing {
+		staticResources("/static", "static")
+		get("/") {
+			call.respondRedirect("/api")
 		}
-		request.getRequestDispatcher("index.jsp").forward(request, response)
+		get("/api") {
+			call.respond(FreeMarkerContent("index.ftl", null))
+		}
+		get("/api/buttonClicked") {
+			val buttonClicked = call.request.queryParameters["button"]
+
+			try {
+				buttonClicked?.let {
+					when (it) {
+						"airline" -> launchAirlineManagementService()
+						"userman" -> launchUserManagementService()
+						"booking" -> launchBookingService()
+						"payment" -> launchPaymentService()
+						"flights" -> launchFlightManagementService()
+						"notific" -> launchNotificationService()
+						"reports" -> launchReportAnalyticsService()
+
+						else -> {
+							call.respond(HttpStatusCode.BadRequest, "Неизвестная кнопка")
+						}
+					}
+				}
+			} catch (e: Exception) {
+				e.printStackTrace()
+			}
+
+			call.respondRedirect("/api")
+		}
+	}
+}
+
+fun Application.configureTemplating() {
+	install(FreeMarker) {
+		templateLoader = ClassTemplateLoader(this::class.java.classLoader, "dynamic")
+		outputFormat = HTMLOutputFormat.INSTANCE
 	}
 }

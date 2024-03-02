@@ -1,8 +1,6 @@
 plugins {
-	id("java")
 	id("org.jetbrains.kotlin.jvm") version "1.9.22"
-	id("org.springframework.boot") version "3.1.5"
-	id("io.spring.dependency-management") version "1.1.4"
+	id("io.ktor.plugin") version "2.3.8"
 }
 
 group = "com.github.hummel"
@@ -10,21 +8,24 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
 	implementation("com.mysql:mysql-connector-j:8.2.0")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
-
-	implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
-	implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0")
-	implementation("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
 	implementation("com.rabbitmq:amqp-client:5.12.0")
 
-	compileOnly("org.apache.tomcat.embed:tomcat-embed-jasper")
+	implementation("io.ktor:ktor-server-core-jvm")
+	implementation("io.ktor:ktor-server-freemarker-jvm")
+	implementation("io.ktor:ktor-server-netty-jvm")
 }
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(11)
 	}
+}
+
+application {
+	mainClass = "com.github.hummel.rda.ApplicationKt"
+
+	val isDevelopment = project.ext.has("development")
+	applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
 tasks {
