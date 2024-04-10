@@ -8,7 +8,7 @@ version = "1.0-SNAPSHOT"
 
 dependencies {
 	implementation("com.mysql:mysql-connector-j:8.2.0")
-	implementation("com.rabbitmq:amqp-client:5.12.0")
+	implementation("com.rabbitmq:amqp-client:5.21.0")
 
 	implementation("io.ktor:ktor-server-core-jvm")
 	implementation("io.ktor:ktor-server-freemarker-jvm")
