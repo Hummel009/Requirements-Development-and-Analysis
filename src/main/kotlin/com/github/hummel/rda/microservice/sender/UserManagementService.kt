@@ -14,7 +14,7 @@ fun launchUserManagementService() {
 			addSampleValue(it, "users", 1)
 		}
 		Sender("UserManagementService", "UserManagementService", System.out)
-	} catch (e: Exception) {
+	} catch (_: Exception) {
 		Sender("Error", "UserManagementService", System.err)
 	}.launch()
 }

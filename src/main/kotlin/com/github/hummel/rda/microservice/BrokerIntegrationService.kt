@@ -1,8 +1,6 @@
 package com.github.hummel.rda.microservice
 
 import com.github.hummel.rda.microservice.sender.*
-import freemarker.cache.ClassTemplateLoader
-import freemarker.core.HTMLOutputFormat
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.freemarker.*
@@ -44,12 +42,5 @@ fun Application.configureRouting() {
 
 			call.respondRedirect("/api")
 		}
-	}
-}
-
-fun Application.configureTemplating() {
-	install(FreeMarker) {
-		templateLoader = ClassTemplateLoader(this::class.java.classLoader, "dynamic")
-		outputFormat = HTMLOutputFormat.INSTANCE
 	}
 }

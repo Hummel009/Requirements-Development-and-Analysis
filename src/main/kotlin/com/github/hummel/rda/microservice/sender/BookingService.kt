@@ -14,7 +14,7 @@ fun launchBookingService() {
 			addSampleValue(it, "bookings", 1)
 		}
 		Sender("BookingService", "BookingService", System.out)
-	} catch (e: Exception) {
+	} catch (_: Exception) {
 		Sender("Error", "BookingService", System.err)
 	}.launch()
 }

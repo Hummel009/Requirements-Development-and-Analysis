@@ -14,7 +14,7 @@ fun launchPaymentService() {
 			addSampleValue(it, "payments", 1)
 		}
 		Sender("PaymentService", "PaymentService", System.out)
-	} catch (e: Exception) {
+	} catch (_: Exception) {
 		Sender("Error", "PaymentService", System.err)
 	}.launch()
 }
