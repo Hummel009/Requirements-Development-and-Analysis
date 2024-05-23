@@ -1,5 +1,5 @@
 plugins {
-	id("org.jetbrains.kotlin.jvm") version "1.9.24"
+	id("org.jetbrains.kotlin.jvm") version "2.0.0"
 	id("io.ktor.plugin") version "2.3.10"
 }
 
@@ -26,10 +26,4 @@ application {
 
 	val isDevelopment = project.ext.has("development")
 	applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
-}
-
-tasks {
-	withType<JavaCompile>().configureEach {
-		options.encoding = "UTF-8"
-	}
 }
